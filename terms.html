@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — CieloCell</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --sky: #3BB0F5; --navy: #0D2E6B; --cloud: #F4F7FB;
+    --grey: #8A94A6; --border: #E4ECF5; --white: #fff;
+    --font: 'Plus Jakarta Sans', sans-serif;
+    --text: #3D4D6B;
+  }
+  body { font-family: var(--font); background: var(--white); color: var(--navy); line-height: 1.75; font-size: 15px; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo img { height: 28px; width: auto; mix-blend-mode: multiply; }
+  .logo-text { font-weight: 800; font-size: 22px; line-height: 1; }
+  .logo-text .cielo { color: var(--sky); }
+  .logo-text .cell { color: var(--navy); }
+  .back-link { font-size: 13px; font-weight: 600; color: var(--sky); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+
+  /* HERO BAND */
+  .doc-hero { background: var(--cloud); border-bottom: 1px solid var(--border); padding: 56px 28px 40px; text-align: center; }
+  .doc-hero h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; color: var(--navy); letter-spacing: -0.8px; margin-bottom: 10px; }
+  .doc-hero .meta { font-size: 13px; color: var(--grey); display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 12px; }
+  .doc-hero .meta span { display: flex; align-items: center; gap: 5px; }
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); display: inline-block; }
+
+  /* WRAPPER */
+  .wrapper { max-width: 780px; margin: 0 auto; padding: 52px 28px 100px; }
+
+  /* TOC */
+  .toc { background: var(--cloud); border-radius: 20px; padding: 26px 28px 22px; margin-bottom: 44px; border: 1px solid var(--border); }
+  .toc-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--grey); margin-bottom: 14px; }
+  .toc ol { padding-left: 18px; }
+  .toc li { font-size: 14px; color: var(--text); margin-bottom: 5px; }
+  .toc a { color: var(--sky); text-decoration: none; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* CALLOUTS */
+  .callout { border-radius: 16px; padding: 18px 22px; margin: 22px 0; }
+  .callout-blue { background: #EFF8FF; border: 1px solid #BAE2FD; }
+  .callout-amber { background: #FFFBEB; border: 1px solid #FDE68A; }
+  .callout p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--text); }
+  .callout-amber p { color: #78450A; }
+  .callout strong { color: var(--navy); }
+  .callout-amber strong { color: #92400E; }
+
+  /* COMPANY CARD */
+  .company-card { background: var(--cloud); border-radius: 16px; padding: 20px 24px; margin: 24px 0; border: 1px solid var(--border); font-size: 14px; color: var(--text); line-height: 1.9; }
+  .company-card strong { color: var(--navy); }
+
+  /* SECTIONS */
+  h2 { font-size: 20px; font-weight: 800; color: var(--navy); margin: 48px 0 14px; letter-spacing: -0.3px; padding-top: 8px; border-top: 1px solid var(--border); }
+  h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin: 26px 0 9px; }
+  p { color: var(--text); margin-bottom: 14px; }
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  li { color: var(--text); margin-bottom: 7px; line-height: 1.65; }
+  a { color: var(--sky); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { color: var(--navy); }
+
+  /* FOOTER */
+  footer { background: var(--cloud); border-top: 1px solid var(--border); padding: 36px 28px; }
+  .footer-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+  .footer-links a { font-size: 13px; color: var(--grey); text-decoration: none; }
+  .footer-copy { font-size: 13px; color: var(--grey); margin-top: 4px; }
+  .footer-legal { max-width: 900px; margin: 20px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--grey); line-height: 1.75; }
+
+  @media (max-width: 600px) {
+    .wrapper { padding: 36px 20px 80px; }
+    .doc-hero { padding: 40px 20px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="CC_Cloud_Only_SQ.png" alt="CieloCell" />
+      <span class="logo-text"><span class="cielo">Cielo</span><span class="cell">Cell</span></span>
+    </a>
+    <a href="index.html" class="back-link">← Back</a>
+  </div>
+</nav>
+
+<div class="doc-hero">
+  <h1>Terms of Service</h1>
+  <div class="meta">
+    <span>Effective: June 1, 2026</span>
+    <span class="dot"></span>
+    <span>Last updated: April 28, 2026</span>
+    <span class="dot"></span>
+    <span>Version 1.0</span>
+  </div>
+</div>
+
+<div class="wrapper">
+
+  <div class="company-card">
+    <strong>Service Provider:</strong> Cielo Cell AB &nbsp;·&nbsp; Org. no. 559579-6912 &nbsp;·&nbsp; DUNS 373683881<br/>
+    <strong>Registered address:</strong> Målarevägen 24, 227 30 Lund, Sweden<br/>
+    <strong>Contact:</strong> <a href="mailto:legal@cielocell.com">legal@cielocell.com</a>
+  </div>
+
+  <div class="callout callout-amber">
+    <p><strong>Please read these Terms carefully.</strong> By accessing or using CieloCell, you confirm that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, you must not use the Service. Section 14 contains a binding arbitration clause and class action waiver.</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Who We Are and What These Terms Cover</a></li>
+      <li><a href="#s2">Eligibility and Account Registration</a></li>
+      <li><a href="#s3">The eSIM Service</a></li>
+      <li><a href="#s4">Ad-Subsidized Data — Rewards and Points</a></li>
+      <li><a href="#s5">Device Compatibility</a></li>
+      <li><a href="#s6">Pricing, Payments, and Taxes</a></li>
+      <li><a href="#s7">Right of Withdrawal and Refunds</a></li>
+      <li><a href="#s8">Acceptable Use</a></li>
+      <li><a href="#s9">Intellectual Property</a></li>
+      <li><a href="#s10">Suspension and Termination</a></li>
+      <li><a href="#s11">Disclaimer of Warranties</a></li>
+      <li><a href="#s12">Limitation of Liability</a></li>
+      <li><a href="#s13">Indemnification</a></li>
+      <li><a href="#s14">Dispute Resolution and Arbitration</a></li>
+      <li><a href="#s15">Governing Law and Jurisdiction</a></li>
+      <li><a href="#s16">Changes to These Terms</a></li>
+      <li><a href="#s17">Contact and Complaints</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <h2 id="s1">1. Who We Are and What These Terms Cover</h2>
+  <p>These Terms of Service ("Terms") are a legally binding agreement between you ("User," "you," "your") and <strong>Cielo Cell AB</strong>, a Swedish aktiebolag registered under Swedish law, org. no. <strong>559579-6912</strong>, DUNS <strong>373683881</strong>, Målarevägen 24, 227 30 Lund, Sweden ("CieloCell," "we," "us," "our").</p>
+  <p>These Terms govern your access to and use of: the CieloCell mobile application; the CieloCell website and all subdomains; eSIM profiles and mobile data packages; and the CieloCell rewards program (collectively, the "Service" or "Platform").</p>
+  <p>CieloCell is an eSIM service provider and connectivity aggregator. Mobile data is delivered through licensed MVNO (Mobile Virtual Network Operator) partner networks. CieloCell does not own or operate any mobile network infrastructure. Your end-to-end data connectivity is ultimately governed by the network partner applicable to your country.</p>
+  <p>By creating an account, downloading the app, activating an eSIM, or using any part of the Service, you agree to these Terms and our <a href="privacy.html">Privacy Policy</a>. If you are using the Service on behalf of a legal entity, you confirm that you have authority to bind that entity.</p>
+
+  <!-- 2 -->
+  <h2 id="s2">2. Eligibility and Account Registration</h2>
+  <h3>2.1 Age</h3>
+  <p>You must be at least <strong>18 years of age</strong> (or the legal age of majority in your jurisdiction, whichever is higher). By registering, you confirm you meet this requirement. Accounts found to belong to minors will be terminated and all data deleted.</p>
+  <h3>2.2 Accuracy of Information</h3>
+  <p>You must provide truthful, accurate, and complete registration information and keep it current. Impersonation, use of fictitious identities, or submission of false information is a material breach of these Terms.</p>
+  <h3>2.3 Account Security</h3>
+  <p>Your account is personal to you. You are responsible for the confidentiality of your login credentials and for all activities under your account. Notify us immediately at <a href="mailto:support@cielocell.com">support@cielocell.com</a> if you suspect unauthorized access.</p>
+  <h3>2.4 One Account Per Person</h3>
+  <p>Each individual may hold only one CieloCell account. Creating multiple accounts to accumulate Points, abuse the referral program, or circumvent any restriction is a material breach and will result in permanent termination of all related accounts and forfeiture of all Points and data balances.</p>
+  <h3>2.5 Non-Transferability</h3>
+  <p>Accounts may not be assigned, sold, or transferred to any third party without our prior written consent.</p>
+
+  <!-- 3 -->
+  <h2 id="s3">3. The eSIM Service</h2>
+  <h3>3.1 What We Provide</h3>
+  <p>CieloCell provisions eSIM profiles that deliver prepaid, data-only mobile connectivity via partner MVNO networks. Upon completing the activation process — which may involve watching advertisements or a one-time activation payment — we issue an eSIM profile via QR code or remote push delivery.</p>
+  <h3>3.2 Data-Only</h3>
+  <p>CieloCell eSIMs are <strong>data-only</strong>. Voice calls and SMS are not included unless explicitly stated for a specific plan. CieloCell plans are designed as supplementary or standalone data connections.</p>
+  <h3>3.3 Network Coverage and Quality</h3>
+  <p>Coverage, speed, and availability depend on our MVNO partner and local network conditions. CieloCell does not guarantee minimum speeds, uninterrupted service, or coverage in any area. Coverage maps are indicative only. Speeds may be reduced after consumption of a defined threshold under a network partner's fair-use policy.</p>
+  <h3>3.4 Designated Country / Region</h3>
+  <p>Each data plan is valid in the country or region specified at purchase. Use outside the designated area may result in service failure or unplanned charges by third-party roaming networks, for which CieloCell bears no liability.</p>
+  <h3>3.5 Expiry</h3>
+  <p>All data packages carry an expiry date displayed in the app. Unused data is forfeited upon expiry and is non-refundable, except where the expiry results from a service failure solely attributable to CieloCell. Expired data cannot be reinstated.</p>
+  <h3>3.6 eSIM Profile — One Device Only</h3>
+  <p>Once installed, an eSIM profile is bound to that device and cannot be transferred to another. You are responsible for ensuring your device is ready before commencing installation. CieloCell is not liable for failed installations caused by device incompatibility, carrier lock, or user error.</p>
+
+  <!-- 4 -->
+  <h2 id="s4">4. Ad-Subsidized Data — Rewards and Points</h2>
+  <h3>4.1 Earning Points</h3>
+  <p>Users earn Points by watching video advertisements, completing surveys, referring new users, and other qualifying activities. Points are redeemable for mobile data packages as displayed in the app.</p>
+  <h3>4.2 Nature of Points</h3>
+  <ul>
+    <li>Points have no monetary value and cannot be redeemed for cash, transferred between accounts, gifted, or sold.</li>
+    <li>Points are a loyalty mechanism provided at CieloCell's discretion and do not constitute a financial instrument, currency, or property right.</li>
+    <li>Points expire after <strong>365 consecutive days</strong> of no earning activity. We will endeavor to notify you at least 30 days before expiry.</li>
+    <li>All Points are permanently forfeited upon account closure or termination for any reason.</li>
+  </ul>
+  <h3>4.3 Prohibited Conduct — Rewards Fraud</h3>
+  <p>The following are strictly prohibited and constitute a material breach of these Terms:</p>
+  <ul>
+    <li>Using bots, scripts, macros, or automated tools to watch ads, earn Points, or trigger rewards;</li>
+    <li>Using VPNs, proxies, or spoofed device identifiers to manipulate ad delivery or inflate impressions;</li>
+    <li>Creating fictitious accounts to exploit referral bonuses or activation credits;</li>
+    <li>Any form of ad fraud, click fraud, or impression fraud;</li>
+    <li>Systematic sharing of credentials to allow third-party Point accumulation.</li>
+  </ul>
+  <p>CieloCell reserves the right to retroactively revoke fraudulently earned Points, terminate accounts, and pursue all available legal remedies.</p>
+  <h3>4.4 Program Changes</h3>
+  <p>CieloCell may modify, suspend, or discontinue the rewards program, any tier, bonus rate, or earning mechanism at any time with reasonable notice. Program changes do not entitle Users to compensation.</p>
+
+  <!-- 5 -->
+  <h2 id="s5">5. Device Compatibility</h2>
+  <p>To use a CieloCell eSIM your device must: support eSIM hardware; be carrier-unlocked; not be jailbroken or rooted in a way that impairs eSIM functionality; and run a supported OS version. Compatibility guidance in the app is a general convenience only and does not constitute a warranty. <strong>It is your sole responsibility to confirm compatibility before purchase.</strong> CieloCell accepts no liability for failed activations caused by device incompatibility, carrier lock, or user error, and no refund will be issued in such cases.</p>
+
+  <!-- 6 -->
+  <h2 id="s6">6. Pricing, Payments, and Taxes</h2>
+  <h3>6.1 Prices</h3>
+  <p>Plan prices are displayed in the app at time of purchase in the currency shown. Prices include VAT where CieloCell is legally required to collect it. Prices may change; changes do not affect confirmed orders.</p>
+  <h3>6.2 Payment Processing</h3>
+  <p>Payments are handled by PCI DSS-certified third-party processors. CieloCell does not store or access full card details. Submitting payment authorizes the stated charge. Full payment is required before plan activation.</p>
+  <h3>6.3 Taxes</h3>
+  <p>You are responsible for any taxes, duties, or levies beyond the VAT collected by CieloCell at point of sale.</p>
+
+  <!-- 7 -->
+  <h2 id="s7">7. Right of Withdrawal and Refunds</h2>
+  <h3>7.1 EU / EEA Consumer Right of Withdrawal</h3>
+  <p>Consumers in the EU/EEA have the right under Directive 2011/83/EU to withdraw from a distance purchase within <strong>14 calendar days</strong> of purchase without providing a reason. <strong>This right expires earlier upon eSIM activation or the start of data consumption.</strong> By completing eSIM activation you expressly acknowledge commencement of the service and waive the right of withdrawal as permitted by Article 16(m) of Directive 2011/83/EU. To withdraw before activation contact <a href="mailto:support@cielocell.com">support@cielocell.com</a>; a refund will be issued within 14 days.</p>
+  <h3>7.2 Service Failure Refunds</h3>
+  <p>Where a plan cannot be used due to a failure solely and directly attributable to CieloCell, we will, at our discretion, provide a replacement plan of equivalent value or a full refund to the original payment method. Requests must be submitted within <strong>30 days</strong> of the issue to <a href="mailto:support@cielocell.com">support@cielocell.com</a>.</p>
+  <h3>7.3 No Refund Situations</h3>
+  <p>Refunds are not available for: data already consumed; expired packages; Point-redeemed purchases; or failures caused by device incompatibility, carrier lock, network partner outage, or user error.</p>
+  <h3>7.4 Free / Ad-Subsidized Data</h3>
+  <p>Data earned through Points redemption is provided without monetary payment and is not refundable under any circumstances.</p>
+
+  <!-- 8 -->
+  <h2 id="s8">8. Acceptable Use</h2>
+  <p>You agree to use the Service only for lawful personal, non-commercial purposes. You must not:</p>
+  <ul>
+    <li>Use the Service for unlawful purposes or to facilitate criminal activity;</li>
+    <li>Transmit spam, malware, viruses, or harmful or illegal content;</li>
+    <li>Interfere with or impair the Platform or its infrastructure;</li>
+    <li>Attempt to gain unauthorized access to any systems or accounts;</li>
+    <li>Reverse-engineer, decompile, or disassemble any part of the Platform or eSIM profile;</li>
+    <li>Resell, sublicense, or commercially exploit any data plan or eSIM without written consent;</li>
+    <li>Use the Service as a hotspot reseller or commercial data distributor;</li>
+    <li>Engage in any conduct prohibited under Section 4.3.</li>
+  </ul>
+  <p>Violation may result in immediate suspension or termination without notice, refund, or compensation, and may expose you to civil or criminal liability.</p>
+
+  <!-- 9 -->
+  <h2 id="s9">9. Intellectual Property</h2>
+  <p>All intellectual property in the Platform — including the CieloCell trademark, logos, software, content, design, and provisioning systems — is owned by or licensed to Cielo Cell AB and is protected under Swedish, EU, and international law. You receive a limited, non-exclusive, non-transferable, revocable license to access the Platform for personal use only. Feedback you provide may be used by CieloCell without restriction or compensation.</p>
+
+  <!-- 10 -->
+  <h2 id="s10">10. Suspension and Termination</h2>
+  <h3>10.1 By CieloCell</h3>
+  <p>We may suspend or terminate your account, with or without notice, for: breach of these Terms; fraud or security risk; account inactivity exceeding 12 consecutive months; or legal obligation. Termination for breach results in immediate forfeiture of all Points and data balances without compensation.</p>
+  <h3>10.2 By You</h3>
+  <p>You may close your account at any time by contacting <a href="mailto:support@cielocell.com">support@cielocell.com</a>. Closure results in immediate, permanent forfeiture of all Points, data balances, and tier status. No refund is issued for unused purchased data unless the 14-day withdrawal right applies.</p>
+  <h3>10.3 Effect of Termination</h3>
+  <p>Termination does not affect any rights or obligations accrued before the termination date. Sections 9, 11, 12, 13, 14, and 15 survive termination.</p>
+
+  <!-- 11 -->
+  <h2 id="s11">11. Disclaimer of Warranties</h2>
+  <p>THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND. TO THE FULLEST EXTENT PERMITTED BY LAW, CIELOCELL DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND UNINTERRUPTED OR ERROR-FREE OPERATION. We do not warrant that the Service will meet your requirements, be available at any particular time, or be free of errors or security vulnerabilities. Network performance is governed by third-party operators.</p>
+
+  <!-- 12 -->
+  <h2 id="s12">12. Limitation of Liability</h2>
+  <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, CIELOCELL AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, AND PARTNERS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES — INCLUDING LOSS OF DATA, LOSS OF PROFITS, LOSS OF GOODWILL, OR BUSINESS INTERRUPTION — ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICE.</p>
+  <p>CIELOCELL'S TOTAL CUMULATIVE LIABILITY FOR ALL CLAIMS ARISING FROM THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF: (A) AMOUNTS PAID BY YOU TO CIELOCELL IN THE 12 MONTHS PRECEDING THE CLAIM; OR (B) USD $10.00.</p>
+  <p>Nothing in these Terms limits liability that cannot be excluded under applicable law, including liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation. Consumers in the EU/EEA retain all mandatory rights under applicable consumer protection legislation.</p>
+
+  <!-- 13 -->
+  <h2 id="s13">13. Indemnification</h2>
+  <p>You agree to defend, indemnify, and hold harmless Cielo Cell AB and its affiliates, officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising from: (a) your breach of these Terms; (b) your use of the Service in violation of law; (c) your content submitted through the Platform; or (d) any dispute between you and a third party related to your use of the Service.</p>
+
+  <!-- 14 -->
+  <h2 id="s14">14. Dispute Resolution and Arbitration</h2>
+  <div class="callout callout-amber">
+    <p><strong>Class Action Waiver:</strong> You and CieloCell agree to resolve disputes on an individual basis only. You waive the right to participate in any class action lawsuit or class-wide arbitration.</p>
+  </div>
+  <h3>14.1 Informal Resolution</h3>
+  <p>Before initiating formal proceedings, contact us at <a href="mailto:legal@cielocell.com">legal@cielocell.com</a> with a written description of the dispute. We will attempt informal resolution within 30 days.</p>
+  <h3>14.2 Binding Arbitration</h3>
+  <p>If informal resolution fails, any dispute arising from these Terms or the Service shall be finally resolved through binding arbitration under the Arbitration Institute of the Stockholm Chamber of Commerce (SCC) rules, seated in Stockholm, Sweden, conducted in English. A single arbitrator shall be appointed. The arbitrator's decision is final and binding.</p>
+  <h3>14.3 EU/EEA Consumer Exception</h3>
+  <p>If you are a consumer in the EU/EEA, you retain the right to bring claims before your local courts or the competent consumer dispute resolution authority in your country of residence. You may also use the EU Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+  <h3>14.4 Exceptions to Arbitration</h3>
+  <p>Either party may seek emergency injunctive or provisional relief before a competent court to prevent irreparable harm, without waiving the right to arbitrate the underlying claim.</p>
+  <h3>14.5 Opt-Out</h3>
+  <p>You may opt out of binding arbitration by emailing <a href="mailto:legal@cielocell.com">legal@cielocell.com</a> within 30 days of first accepting these Terms, stating your full name and opt-out intention. Opting out does not affect other provisions.</p>
+
+  <!-- 15 -->
+  <h2 id="s15">15. Governing Law and Jurisdiction</h2>
+  <p>These Terms are governed by Swedish law. To the extent court proceedings are permitted (or arbitration is deemed unenforceable), the parties submit to the exclusive jurisdiction of the courts of Lund, Sweden. Consumers in the EU/EEA may additionally rely on mandatory consumer protection laws of their country of residence.</p>
+
+  <!-- 16 -->
+  <h2 id="s16">16. Changes to These Terms</h2>
+  <p>CieloCell may update these Terms at any time. Material changes will be communicated via in-app notice and, where practicable, by email to your registered address, with at least 14 days' advance notice before the change takes effect. Your continued use of the Service after the effective date constitutes acceptance. If you do not agree, you must stop using the Service and may close your account.</p>
+
+  <!-- 17 -->
+  <h2 id="s17">17. Contact and Complaints</h2>
+  <div class="callout callout-blue">
+    <p><strong>Cielo Cell AB</strong><br/>
+    Legal &amp; Compliance · Målarevägen 24, 227 30 Lund, Sweden<br/>
+    Legal inquiries: <a href="mailto:legal@cielocell.com">legal@cielocell.com</a><br/>
+    Customer support: <a href="mailto:support@cielocell.com">support@cielocell.com</a></p>
+  </div>
+  <p>EU consumers may also contact the Swedish National Board for Consumer Disputes (ARN) at <a href="https://www.arn.se" target="_blank" rel="noopener">arn.se</a>, or use the EU ODR platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+  <p style="margin-top:36px; font-size:13px; color:var(--grey);">If any provision of these Terms is held invalid or unenforceable, the remaining provisions continue in full force. These Terms and the Privacy Policy constitute the entire agreement between you and CieloCell regarding the Service.</p>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="logo">
+      <img src="CC_Cloud_Only_SQ.png" alt="CieloCell" style="height:22px;mix-blend-mode:multiply" />
+      <span class="logo-text" style="font-size:17px"><span class="cielo">Cielo</span><span class="cell">Cell</span></span>
+    </a>
+    <div class="footer-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <span style="color:var(--border)">|</span>
+      <span class="footer-copy">© 2026 Cielo Cell AB. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="footer-legal">
+    CieloCell is an ad-subsidized eSIM service operated by Cielo Cell AB (org. no. 559579-6912), registered in Sweden. Mobile data plans are provided through licensed MVNO partners. eSIM compatibility depends on device and carrier unlock status. CieloCell is not affiliated with Apple Inc. or Google LLC. Apple, Apple Pay, and the Apple logo are trademarks of Apple Inc. Google Pay and the Google Play logo are trademarks of Google LLC.
+  </div>
+</footer>
+</body>
+</html>
