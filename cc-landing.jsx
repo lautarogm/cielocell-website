@@ -23,7 +23,7 @@ const LandingPage = ({ onBack, onNav }) => {
 
 
   const steps = [
-  { n: '01', title: 'get your esim', desc: 'download the app and install the esim, and you are ready.' },
+  { n: '01', title: 'get the app', desc: 'download the app and install the esim, and you are ready.' },
   { n: '02', title: 'earn or buy data', desc: 'watch ads, complete offers, collect points or buy low-cost data packs' },
   { n: '03', title: 'stay connected', desc: 'use mobile data for free or for less. contract-free' }];
 
@@ -33,7 +33,7 @@ const LandingPage = ({ onBack, onNav }) => {
   { q: 'is it actually free?', a: "yes. you can earn free data by watching ads, completing offers, or collecting points in the app. you can also buy data if you want more, faster." },
   { q: 'do i need a credit card?', a: "no. you can start earning data without a credit card. paid options are available if you want to buy a data pack or skip the ads." },
   { q: 'how do i get connected?', a: "download the app, choose how you want to start, get your esim, and turn it on. that's it." },
-  { q: 'do i choose a country?', a: "usually, no. cielocell detects your current region and shows the data options available there. in some cases, you may be able to choose a broader region." },
+  { q: 'how does cielocell know where i am?', a: "cielocell detects your current region and shows the data options available there. in some cases, you may be able to choose a broader region." },
   { q: 'do i keep my regular number?', a: "yes. cielocell gives you mobile data through an esim. your regular sim and phone number can stay active." },
   { q: 'how does coverage work?', a: "cielocell connects through partner mobile networks. coverage depends on your location, device, and local network availability." }];
 
@@ -56,7 +56,7 @@ const LandingPage = ({ onBack, onNav }) => {
             <span style={{ fontFamily: D, fontWeight: 900, fontSize: 24, color: CC.ink, textTransform: 'lowercase', letterSpacing: -0.8, lineHeight: 1 }}>cielocell</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <CCButton variant="primary" size="sm" iconRight={<CCIcon.ArrowRight size={14} />}>get the app</CCButton>
+            <a href="mailto:hello@cielocell.com" style={{ textDecoration: 'none' }}><CCButton variant="primary" size="sm" iconRight={<CCIcon.ArrowRight size={14} />}>get the app</CCButton></a>
           </div>
         </div>
       </nav>
@@ -71,12 +71,7 @@ const LandingPage = ({ onBack, onNav }) => {
 
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-            <CCButton variant="primary" size="lg" iconRight={<CCIcon.ArrowRight size={18} />}>get the app</CCButton>
-          </div>
-          <div style={{ marginTop: 36, display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center', color: CC.inkMuted, fontFamily: F, fontSize: 14, fontWeight: 500 }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><span style={{ width: 8, height: 8, borderRadius: 999, background: CC.lime }} /> 190+ countries</span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><span style={{ width: 8, height: 8, borderRadius: 999, background: CC.pink }} /> no contracts</span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><span style={{ width: 8, height: 8, borderRadius: 999, background: CC.ink }} /> launching june 2026</span>
+            <a href="mailto:hello@cielocell.com" style={{ textDecoration: 'none' }}><CCButton variant="primary" size="lg" iconRight={<CCIcon.ArrowRight size={18} />}>get the app</CCButton></a>
           </div>
         </div>
       </section>
@@ -152,14 +147,14 @@ const LandingPage = ({ onBack, onNav }) => {
       <section style={{ padding: 'clamp(64px, 8vw, 120px) 28px', background: CC.ink, color: CC.cream, position: 'relative', overflow: 'hidden' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative' }}>
           <h2 style={{ fontFamily: D, fontWeight: 900, fontSize: 'clamp(48px, 9vw, 144px)', lineHeight: 0.92, letterSpacing: -0.05 + 'em', margin: 0, textTransform: 'lowercase', color: CC.cream, maxWidth: '12ch' }}>
-            ready to <span style={{ color: CC.lime }}>roam free?</span>
+            ready for <span style={{ color: CC.lime }}>free data?</span>
           </h2>
           <p style={{ fontFamily: F, fontSize: 'clamp(16px, 1.6vw, 20px)', fontWeight: 500, lineHeight: 1.5, color: CC.cream, opacity: 0.8, maxWidth: 540, margin: '28px 0 36px', textTransform: 'lowercase' }}>join the waitlist — we'll send you a free 100mb pack when the app launches in june.
 
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', maxWidth: 540 }}>
             <input type="email" placeholder="your@email.com" style={{ flex: '1 1 240px', background: 'rgba(255,246,229,0.08)', border: `1.5px solid ${CC.cream}`, borderRadius: 999, padding: '16px 22px', fontFamily: F, fontSize: 15, color: CC.cream, outline: 'none' }} />
-            <CCButton variant="lime" size="lg" iconRight={<CCIcon.ArrowRight size={18} />}>join waitlist</CCButton>
+            <a href="mailto:hello@cielocell.com" style={{ textDecoration: 'none' }}><CCButton variant="lime" size="lg" iconRight={<CCIcon.ArrowRight size={18} />}>join waitlist</CCButton></a>
           </div>
         </div>
       </section>
