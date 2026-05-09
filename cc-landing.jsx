@@ -54,9 +54,6 @@ const LandingPage = ({ onBack, onNav }) => {
             <span style={{ fontFamily: D, fontWeight: 900, fontSize: 24, color: CC.ink, textTransform: 'lowercase', letterSpacing: -0.8, lineHeight: 1 }}>cielocell</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <a href="#how" style={{ fontFamily: F, fontWeight: 500, fontSize: 14, color: CC.ink, textDecoration: 'none', padding: '8px 14px' }}>how it works</a>
-            <a href="#why" style={{ fontFamily: F, fontWeight: 500, fontSize: 14, color: CC.ink, textDecoration: 'none', padding: '8px 14px' }}>why us</a>
-            <a href="#faq" style={{ fontFamily: F, fontWeight: 500, fontSize: 14, color: CC.ink, textDecoration: 'none', padding: '8px 14px' }}>faq</a>
             <CCButton variant="primary" size="sm" iconRight={<CCIcon.ArrowRight size={14} />}>get the app</CCButton>
           </div>
         </div>
@@ -152,9 +149,6 @@ const LandingPage = ({ onBack, onNav }) => {
 
       {/* ── BIG CTA ── */}
       <section style={{ padding: 'clamp(64px, 8vw, 120px) 28px', background: CC.ink, color: CC.cream, position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-40px', right: '-20px', opacity: 0.9 }}>
-          <CCMascot size={220} color={CC.lime} eyeColor={CC.ink} />
-        </div>
         <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative' }}>
           <h2 style={{ fontFamily: D, fontWeight: 900, fontSize: 'clamp(48px, 9vw, 144px)', lineHeight: 0.92, letterSpacing: -0.05 + 'em', margin: 0, textTransform: 'lowercase', color: CC.cream, maxWidth: '12ch' }}>
             ready to <span style={{ color: CC.lime }}>roam free?</span>
