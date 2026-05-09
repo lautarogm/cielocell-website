@@ -22,9 +22,18 @@
 <script type="text/babel" src="cc-tokens.jsx"></script>
 <script type="text/babel" src="cc-icons.jsx"></script>
 <script type="text/babel" src="cc-components.jsx"></script>
+<script type="text/babel" src="cc-legal-shared.jsx"></script>
+<script type="text/babel" src="cc-terms-page.jsx"></script>
+<script type="text/babel" src="cc-privacy-page.jsx"></script>
 <script type="text/babel" src="cc-landing.jsx"></script>
 <script type="text/babel">
-  const Root = () => <LandingPage onNav={() => {}} />;
+  const Root = () => {
+    const [view, setView] = React.useState('landing');
+    React.useEffect(() => { window.scrollTo(0, 0); }, [view]);
+    if (view === 'terms')   return <TermsPage   onBack={() => setView('landing')} onNav={setView} />;
+    if (view === 'privacy') return <PrivacyPage onBack={() => setView('landing')} onNav={setView} />;
+    return <LandingPage onNav={setView} />;
+  };
   ReactDOM.createRoot(document.getElementById('root')).render(<Root />);
 </script>
 </body>
