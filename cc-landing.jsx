@@ -23,17 +23,19 @@ const LandingPage = ({ onBack, onNav }) => {
 
 
   const steps = [
-  { n: '01', title: 'pick a country.', desc: '190+ destinations. tap one, see what a pack costs — or how to earn it free.' },
-  { n: '02', title: 'tap. watch. roam.', desc: 'short ads, simple offers, in-app games. each one tops up your data balance instantly.' },
-  { n: '03', title: 'land online.', desc: 'esim activates the moment you land. no swaps, no contracts, no roaming bills.' }];
+  { n: '01', title: 'get your esim', desc: 'download the app and install the esim, and you are ready.' },
+  { n: '02', title: 'earn or buy data', desc: 'watch ads, complete offers, collect points or buy low-cost data packs' },
+  { n: '03', title: 'stay connected', desc: 'use mobile data for free or for less. contract-free' }];
 
 
   const faqs = [
-  { q: 'is my phone compatible?', a: "most modern smartphones support esim. dial *#06# — if an EID number appears, you're good. just make sure it's carrier-unlocked." },
-  { q: 'is it actually free?', a: "yes. you can pay cash for a pack, or watch ads / try offers to earn data. most users get their first GB without spending anything." },
-  { q: 'how fast can i get connected?', a: "after install, the esim activates in 60 seconds. you can set it up before you fly and it'll switch on the moment you land." },
-  { q: 'do i keep my regular number?', a: 'yes. esim runs alongside your physical SIM, so your home line stays active while you travel.' },
-  { q: 'how does coverage work?', a: 'we partner with licensed local networks in every country, so you get real local 4G/5G — not a foreign roaming signal.' }];
+  { q: 'is my phone compatible?', a: "most modern smartphones support esim. dial *#06# — if you see an eid number, your phone likely supports esim. your phone also needs to be carrier-unlocked." },
+  { q: 'is it actually free?', a: "yes. you can earn free data by watching ads, completing offers, or collecting points in the app. you can also buy data if you want more, faster." },
+  { q: 'do i need a credit card?', a: "no. you can start earning data without a credit card. paid options are available if you want to buy a data pack or skip the ads." },
+  { q: 'how do i get connected?', a: "download the app, choose how you want to start, get your esim, and turn it on. that's it." },
+  { q: 'do i choose a country?', a: "usually, no. cielocell detects your current region and shows the data options available there. in some cases, you may be able to choose a broader region." },
+  { q: 'do i keep my regular number?', a: "yes. cielocell gives you mobile data through an esim. your regular sim and phone number can stay active." },
+  { q: 'how does coverage work?', a: "cielocell connects through partner mobile networks. coverage depends on your location, device, and local network availability." }];
 
 
   const screens = [
@@ -62,11 +64,10 @@ const LandingPage = ({ onBack, onNav }) => {
       {/* ── HERO ── */}
       <section style={{ position: 'relative', padding: 'clamp(48px, 8vw, 96px) 28px clamp(64px, 9vw, 120px)', overflow: 'hidden' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative', zIndex: 0 }}>
-          <h1 style={{ fontFamily: D, fontWeight: 900, fontSize: 'clamp(64px, 14vw, 220px)', lineHeight: 0.88, letterSpacing: -0.06 + 'em', margin: 0, textTransform: 'lowercase', color: CC.ink, maxWidth: '14ch' }}>
-            free data,<br />
-            <span style={{ color: CC.pink }}>free</span> roam.
+          <h1 style={{ fontFamily: D, fontWeight: 900, lineHeight: 0.88, letterSpacing: -0.06 + 'em', margin: 0, textTransform: 'lowercase', color: CC.ink, maxWidth: '14ch', fontSize: "130px" }}>
+            free data,<br /><span style={{ color: CC.pink }}>free</span> backup
           </h1>
-          <p style={{ fontFamily: F, fontSize: 'clamp(18px, 2vw, 26px)', fontWeight: 500, lineHeight: 1.35, color: CC.ink, textTransform: 'lowercase', margin: "39px 0px 40px" }}>free or low-cost mobile data powered by ads. no contracts, no credit card, no hiden fees 
+          <p style={{ fontFamily: F, fontSize: 'clamp(18px, 2vw, 26px)', fontWeight: 500, lineHeight: 1.35, color: CC.ink, textTransform: 'lowercase', margin: "39px 0px 40px" }}>free or low-cost mobile data powered by ads. no contracts, no credit card, no hidden fees 
 
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
@@ -108,8 +109,8 @@ const LandingPage = ({ onBack, onNav }) => {
             <h2 style={{ fontFamily: D, fontWeight: 900, fontSize: 'clamp(40px, 7vw, 96px)', lineHeight: 0.95, letterSpacing: -0.04 + 'em', margin: 0, textTransform: 'lowercase', color: CC.ink }}>
               you're going<br />to <span style={{ color: CC.pink }}>love</span> this.
             </h2>
-            <p style={{ fontFamily: F, fontSize: 'clamp(16px, 1.5vw, 19px)', fontWeight: 500, lineHeight: 1.5, color: CC.ink, opacity: 0.8, margin: '24px 0 0', maxWidth: 460, textTransform: 'lowercase' }}>
-              a sneak peek at the app. tap in, watch a few short ads, and walk away with real mobile data. no credit card. no contracts. no catch.
+            <p style={{ fontFamily: F, fontSize: 'clamp(16px, 1.5vw, 19px)', fontWeight: 500, lineHeight: 1.5, color: CC.ink, opacity: 0.8, margin: '24px 0 0', maxWidth: 460, textTransform: 'lowercase' }}>open the app, choose how you want to get data, and connect with an esim in minutes. watch ads, earn points, buy a pack. no contract.
+
             </p>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -175,8 +176,8 @@ const LandingPage = ({ onBack, onNav }) => {
             <button onClick={() => onNav && onNav('privacy')} style={{ background: 'none', border: 'none', fontFamily: F, fontSize: 13, color: CC.ink, fontWeight: 500, cursor: 'pointer', padding: '6px 10px' }}>privacy</button>
             <a href="mailto:hello@cielocell.com" style={{ fontFamily: F, fontSize: 13, color: CC.ink, fontWeight: 500, textDecoration: 'none', padding: '6px 10px' }}>contact</a>
           </div>
-          <div style={{ fontFamily: F, fontSize: 12, color: CC.inkMuted }}>
-            © 2026 cielo cell ab · lund, sweden
+          <div style={{ fontFamily: F, fontSize: 12, color: CC.inkMuted }}>© 2026
+
           </div>
         </div>
       </footer>

@@ -30,9 +30,13 @@
   const Root = () => {
     const [view, setView] = React.useState('landing');
     React.useEffect(() => { window.scrollTo(0, 0); }, [view]);
-    if (view === 'terms')   return <TermsPage   onBack={() => setView('landing')} onNav={setView} />;
-    if (view === 'privacy') return <PrivacyPage onBack={() => setView('landing')} onNav={setView} />;
-    return <LandingPage onNav={setView} />;
+    const navigate = (next) => {
+      if (next === view) { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      else { setView(next); }
+    };
+    if (view === 'terms')   return <TermsPage   onBack={() => setView('landing')} onNav={navigate} />;
+    if (view === 'privacy') return <PrivacyPage onBack={() => setView('landing')} onNav={navigate} />;
+    return <LandingPage onNav={navigate} />;
   };
   ReactDOM.createRoot(document.getElementById('root')).render(<Root />);
 </script>

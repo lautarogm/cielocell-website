@@ -66,11 +66,11 @@ const LegalPage = ({ title, highlight, subtitle, sections, onBack, onNav, sister
                       <CCIcon.Plus size={14} color={CC.cream} strokeWidth={2.5} />
                     </span>
                   </button>
-                  {open && (
-                    <div style={{ padding: '0 24px 22px', fontFamily: F, fontSize: 14.5, color: CC.ink, lineHeight: 1.7, opacity: 0.86, whiteSpace: 'pre-line' }}>{content}</div>
-                  )}
-                </div>
-              );
+                  {open &&
+                  <div style={{ padding: '0 24px 22px', fontFamily: F, fontSize: 14.5, color: CC.ink, lineHeight: 1.7, opacity: 0.86, whiteSpace: 'pre-line' }}>{content}</div>
+                  }
+                </div>);
+
             })}
           </div>
         </div>
@@ -98,14 +98,14 @@ const LegalPage = ({ title, highlight, subtitle, sections, onBack, onNav, sister
             <button onClick={() => onNav && onNav('privacy')} style={{ background: 'none', border: 'none', fontFamily: F, fontSize: 13, color: CC.ink, fontWeight: 500, cursor: 'pointer', padding: '6px 10px', textTransform: 'lowercase' }}>privacy</button>
             <a href="mailto:hello@cielocell.com" style={{ fontFamily: F, fontSize: 13, color: CC.ink, fontWeight: 500, textDecoration: 'none', padding: '6px 10px', textTransform: 'lowercase' }}>contact</a>
           </div>
-          <div style={{ fontFamily: F, fontSize: 12, color: CC.inkMuted, textTransform: 'lowercase' }}>
-            © 2026 cielo cell ab · lund, sweden
+          <div style={{ fontFamily: F, fontSize: 12, color: CC.inkMuted, textTransform: 'lowercase' }}>© 2026
+
           </div>
         </div>
       </footer>
 
-    </div>
-  );
+    </div>);
+
 };
 
 Object.assign(window, { LegalPage });
