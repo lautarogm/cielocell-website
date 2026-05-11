@@ -342,9 +342,8 @@ const PhoneMock = ({ variant = 0, bg = CC.cream }) => {
 
 };
 
-// ── iPhone 17 frame — titanium bezel, dynamic island, slot for one image ──
-const IPhone17Frame = ({ src, width = 320 }) => {
-  // iPhone 17 ratio approx 19.5:9 → 320 × ~692. Image is 626×1258 (≈9:18.07) so close.
+// ── iPhone 17 frame — titanium bezel, dynamic island, accepts an image src OR children ──
+const IPhone17Frame = ({ src, children, width = 320 }) => {
   const height = Math.round(width * (1258 / 626));
   return (
     <div style={{
@@ -361,7 +360,7 @@ const IPhone17Frame = ({ src, width = 320 }) => {
         overflow: 'hidden', position: 'relative',
         background: CC.pink
       }}>
-        <img src={src} alt="cielocell app" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} />
+        {children ? children : <img src={src} alt="cielocell app" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} />}
         {/* Dynamic island */}
         <div style={{ position: 'absolute', top: width * 0.035, left: '50%', transform: 'translateX(-50%)', width: width * 0.32, height: width * 0.085, borderRadius: 999, background: '#000', zIndex: 5 }} />
       </div>
@@ -369,4 +368,107 @@ const IPhone17Frame = ({ src, width = 320 }) => {
 
 };
 
-Object.assign(window, { LandingPage, PhoneMock, IPhone17Frame });
+// ── Earn-data welcome screen — pink, mascot, three perks, big CTA ──
+const EarnDataWelcomeScreen = () => {
+  const D = CC.display;
+  const F = CC.font;
+
+  const perks = [
+    { label: 'free eSIM',  icon: (
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={CC.ink} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="5" y="3" width="14" height="18" rx="2.5" />
+        <path d="M9 11h6M9 14h6M9 17h3" />
+      </svg>
+    )},
+    { label: 'watch ads',  icon: (
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={CC.ink} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="6" width="14" height="13" rx="2" />
+        <rect x="7" y="3" width="14" height="13" rx="2" />
+        <polygon points="11,9 16,12 11,15" fill={CC.ink} stroke="none" />
+      </svg>
+    )},
+    { label: 'get data',   icon: (
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke={CC.ink} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 13a10 10 0 0114 0" />
+        <path d="M8 16.5a6 6 0 018 0" />
+        <circle cx="12" cy="19.5" r="1.4" fill={CC.ink} stroke="none" />
+      </svg>
+    )},
+  ];
+
+  return (
+    <div style={{
+      width: '100%', height: '100%', background: CC.pink, color: CC.ink,
+      padding: '54px 22px 22px', display: 'flex', flexDirection: 'column',
+      position: 'relative', boxSizing: 'border-box',
+      fontFamily: F
+    }}>
+      {/* status bar (under dynamic island) */}
+      <div style={{ position: 'absolute', top: 16, left: 24, right: 24, display: 'flex', justifyContent: 'space-between', fontFamily: F, fontSize: 11, fontWeight: 700, color: CC.ink }}>
+        <span>9:41</span>
+        <span style={{ display: 'inline-flex', gap: 4, alignItems: 'center' }}>
+          <span style={{ width: 14, height: 9, border: `1.2px solid ${CC.ink}`, borderRadius: 2, position: 'relative' }}>
+            <span style={{ position: 'absolute', inset: 1, background: CC.ink, borderRadius: 0.5 }} />
+          </span>
+        </span>
+      </div>
+
+      {/* mascot */}
+      <div style={{ marginTop: 14, marginBottom: 18 }}>
+        <CCMascot size={104} color={CC.cream} eyeColor={CC.ink} />
+      </div>
+
+      {/* headline */}
+      <div style={{
+        fontFamily: D, fontWeight: 900, fontSize: 38, lineHeight: 0.95,
+        letterSpacing: -1.4, color: CC.ink, textTransform: 'lowercase'
+      }}>
+        free mobile<br />data.<br />no credit<br />card.
+      </div>
+
+      <div style={{ flex: 1 }} />
+
+      {/* three perks */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 14 }}>
+        {perks.map((p) => (
+          <div key={p.label} style={{
+            background: CC.cream, border: `1.5px solid ${CC.ink}`, borderRadius: 16,
+            padding: '12px 8px 10px', display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-start'
+          }}>
+            <div style={{
+              width: 30, height: 30, borderRadius: 7, background: CC.lime,
+              border: `1.2px solid ${CC.ink}`,
+              display: 'flex', alignItems: 'center', justifyContent: 'center'
+            }}>{p.icon}</div>
+            <div style={{ fontFamily: D, fontWeight: 900, fontSize: 11, color: CC.ink, textTransform: 'lowercase', letterSpacing: -0.2 }}>{p.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <button style={{
+        background: CC.ink, color: CC.cream, border: 'none', borderRadius: 999,
+        padding: '13px 14px 13px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        fontFamily: D, fontWeight: 900, fontSize: 14, textTransform: 'lowercase', letterSpacing: -0.3, cursor: 'pointer'
+      }}>
+        start earning free data
+        <span style={{
+          width: 30, height: 30, borderRadius: 999, background: CC.lime,
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+        }}>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke={CC.ink} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="13,6 19,12 13,18" />
+          </svg>
+        </span>
+      </button>
+
+      {/* sign-in */}
+      <div style={{ fontFamily: D, fontWeight: 900, fontSize: 11, color: CC.ink, textTransform: 'lowercase', marginTop: 12, letterSpacing: -0.2 }}>
+        already have an account? <span style={{ textDecoration: 'underline' }}>log in</span>
+      </div>
+    </div>
+  );
+};
+
+Object.assign(window, { LandingPage, PhoneMock, IPhone17Frame, EarnDataWelcomeScreen });
