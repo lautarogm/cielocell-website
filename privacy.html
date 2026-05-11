@@ -3,333 +3,40 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy — CieloCell</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<title>CieloCell — privacy policy</title>
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --sky: #3BB0F5; --navy: #0D2E6B; --cloud: #F4F7FB;
-    --grey: #8A94A6; --border: #E4ECF5; --white: #fff;
-    --font: 'Plus Jakarta Sans', sans-serif; --text: #3D4D6B;
-  }
-  body { font-family: var(--font); background: var(--white); color: var(--navy); line-height: 1.75; font-size: 15px; -webkit-font-smoothing: antialiased; }
-  nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
-  .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo img { height: 28px; width: auto; mix-blend-mode: multiply; }
-  .logo-text { font-weight: 800; font-size: 22px; line-height: 1; }
-  .logo-text .cielo { color: var(--sky); }
-  .logo-text .cell { color: var(--navy); }
-  .back-link { font-size: 13px; font-weight: 600; color: var(--sky); text-decoration: none; }
-  .doc-hero { background: var(--cloud); border-bottom: 1px solid var(--border); padding: 56px 28px 40px; text-align: center; }
-  .doc-hero h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; color: var(--navy); letter-spacing: -0.8px; margin-bottom: 10px; }
-  .doc-hero .meta { font-size: 13px; color: var(--grey); display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 12px; }
-  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); display: inline-block; }
-  .wrapper { max-width: 780px; margin: 0 auto; padding: 52px 28px 100px; }
-  .toc { background: var(--cloud); border-radius: 20px; padding: 26px 28px 22px; margin-bottom: 44px; border: 1px solid var(--border); }
-  .toc-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--grey); margin-bottom: 14px; }
-  .toc ol { padding-left: 18px; }
-  .toc li { font-size: 14px; color: var(--text); margin-bottom: 5px; }
-  .toc a { color: var(--sky); text-decoration: none; font-weight: 500; }
-  .callout { border-radius: 16px; padding: 18px 22px; margin: 22px 0; }
-  .callout-blue { background: #EFF8FF; border: 1px solid #BAE2FD; }
-  .callout-green { background: #F0FDF4; border: 1px solid #BBF7D0; }
-  .callout-amber { background: #FFFBEB; border: 1px solid #FDE68A; }
-  .callout p { margin: 0; font-size: 14px; line-height: 1.7; color: var(--text); }
-  .callout-amber p { color: #78450A; }
-  .callout strong { color: var(--navy); }
-  .callout-amber strong { color: #92400E; }
-  .callout-green strong { color: #166534; }
-  .callout-green p { color: #166534; }
-  h2 { font-size: 20px; font-weight: 800; color: var(--navy); margin: 48px 0 14px; letter-spacing: -0.3px; padding-top: 8px; border-top: 1px solid var(--border); }
-  h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin: 26px 0 9px; }
-  p { color: var(--text); margin-bottom: 14px; }
-  ul, ol { padding-left: 22px; margin-bottom: 14px; }
-  li { color: var(--text); margin-bottom: 7px; line-height: 1.65; }
-  a { color: var(--sky); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  strong { color: var(--navy); }
-  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; border-radius: 14px; overflow: hidden; }
-  th { background: var(--cloud); color: var(--navy); font-weight: 700; padding: 13px 16px; text-align: left; border: 1px solid var(--border); }
-  td { padding: 12px 16px; border: 1px solid var(--border); color: var(--text); vertical-align: top; }
-  tr:nth-child(even) td { background: #FAFCFF; }
-  .rights-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; margin: 20px 0; }
-  .right-card { background: var(--cloud); border-radius: 14px; padding: 16px 18px; border: 1px solid var(--border); }
-  .right-card strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 5px; }
-  .right-card span { font-size: 13px; color: var(--grey); line-height: 1.55; display: block; }
-  footer { background: var(--cloud); border-top: 1px solid var(--border); padding: 36px 28px; }
-  .footer-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
-  .footer-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
-  .footer-links a { font-size: 13px; color: var(--grey); text-decoration: none; }
-  .footer-legal { max-width: 900px; margin: 20px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--grey); line-height: 1.75; }
-  @media (max-width: 600px) { .wrapper { padding: 36px 20px 80px; } .doc-hero { padding: 40px 20px 30px; } table { font-size: 13px; } }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #FFF6E5; font-family: 'DM Sans', sans-serif; color: #0E1F18; }
 </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="CC_Cloud_Only_SQ.png" alt="CieloCell" />
-      <span class="logo-text"><span class="cielo">Cielo</span><span class="cell">Cell</span></span>
-    </a>
-    <a href="index.html" class="back-link">← Back</a>
-  </div>
-</nav>
-
-<div class="doc-hero">
-  <h1>Privacy Policy</h1>
-  <div class="meta">
-    <span>Effective: June 1, 2026</span>
-    <span class="dot"></span>
-    <span>Last updated: April 28, 2026</span>
-    <span class="dot"></span>
-    <span>Version 1.0</span>
-  </div>
-</div>
-
-<div class="wrapper">
-
-  <div class="callout callout-green">
-    <p><strong>Plain-language summary:</strong> CieloCell gives you free mobile data in exchange for watching ads. To make that exchange work, we share certain device signals with advertising partners. We do not sell your name or email to third parties. You control your marketing preferences at any time and can request deletion of your data.</p>
-  </div>
-
-  <div class="toc">
-    <div class="toc-title">Contents</div>
-    <ol>
-      <li><a href="#p1">Who We Are — Data Controller</a></li>
-      <li><a href="#p2">What Personal Data We Collect</a></li>
-      <li><a href="#p3">Legal Bases and Purposes of Processing</a></li>
-      <li><a href="#p4">The Ad-Subsidized Model — Advertising Data</a></li>
-      <li><a href="#p5">Who We Share Your Data With</a></li>
-      <li><a href="#p6">International Data Transfers</a></li>
-      <li><a href="#p7">Retention Periods</a></li>
-      <li><a href="#p8">Your Rights</a></li>
-      <li><a href="#p9">California Residents — CCPA / CPRA</a></li>
-      <li><a href="#p10">Children's Privacy</a></li>
-      <li><a href="#p11">Cookies and Tracking Technologies</a></li>
-      <li><a href="#p12">Security</a></li>
-      <li><a href="#p13">Changes to This Policy</a></li>
-      <li><a href="#p14">Contact and Data Protection Officer</a></li>
-    </ol>
-  </div>
-
-  <!-- 1 -->
-  <h2 id="p1">1. Who We Are — Data Controller</h2>
-  <p>This Privacy Policy ("Notice") describes how <strong>Cielo Cell AB</strong>, org. no. 559579-6912, DUNS 373683881, Målarevägen 24, 227 30 Lund, Sweden ("CieloCell," "we," "us," "our") collects, uses, shares, and protects your personal data when you use our mobile application, website, and eSIM connectivity services (the "Service").</p>
-  <p>Cielo Cell AB is the <strong>data controller</strong> for all personal data processed under this Notice. Where we engage third parties to process data on our behalf, they do so under binding data processing agreements that require them to protect your information to at least the same standard we do.</p>
-  <p>For questions about this Notice, contact our privacy team at <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a>.</p>
-
-  <!-- 2 -->
-  <h2 id="p2">2. What Personal Data We Collect</h2>
-  <h3>2.1 Data You Provide Directly</h3>
-  <ul>
-    <li><strong>Account registration:</strong> Name, email address, hashed password, and authentication tokens (Google/Apple ID).</li>
-    <li><strong>Payment information:</strong> Billing name, card type, last four digits, expiry date, and billing address. Full card numbers are processed and stored solely by our PCI DSS-certified payment processor. CieloCell never stores raw card data.</li>
-    <li><strong>Communications:</strong> Messages and attachments you send via support channels, email, or in-app chat.</li>
-    <li><strong>Survey responses:</strong> Answers and feedback submitted through the Platform's survey or offer features.</li>
-  </ul>
-  <h3>2.2 Data We Collect Automatically</h3>
-  <ul>
-    <li><strong>Device identifiers:</strong> Device model, OS version, unique device ID, advertising ID (IDFA on iOS / GAID on Android), and eSIM EID.</li>
-    <li><strong>Network data:</strong> IP address, mobile network code, roaming status, and connection type.</li>
-    <li><strong>App usage:</strong> Screen views, feature interactions, session duration, ad impressions, ad completions, Points earned and redeemed, and data plan activations.</li>
-    <li><strong>Location data:</strong> Country-level location derived from IP address or SIM registration, used solely to determine eligible data plans. We do not collect precise GPS coordinates unless you expressly grant location permission for coverage-checking features.</li>
-    <li><strong>Crash and diagnostic data:</strong> Error logs, stack traces, and performance metrics to maintain service quality.</li>
-  </ul>
-  <h3>2.3 Data from Third Parties</h3>
-  <ul>
-    <li><strong>Authentication providers:</strong> If you sign in via Google or Apple, we receive your name, email, and authentication token from that provider.</li>
-    <li><strong>Advertising partners:</strong> Ad viewability signals, completion events, and fraud-prevention signals from ad network SDKs embedded in the app.</li>
-    <li><strong>MVNO network partners:</strong> Data consumption records and eSIM activation status necessary to provision your service.</li>
-  </ul>
-
-  <!-- 3 -->
-  <h2 id="p3">3. Legal Bases and Purposes of Processing</h2>
-  <table>
-    <thead>
-      <tr><th>Purpose</th><th>Legal Basis (GDPR)</th><th>Data Used</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Creating and managing your account</td><td>Contract performance (Art. 6(1)(b))</td><td>Name, email, device ID</td></tr>
-      <tr><td>Providing eSIM connectivity and data plans</td><td>Contract performance (Art. 6(1)(b))</td><td>Device ID, EID, usage data, payment info</td></tr>
-      <tr><td>Serving video advertisements and crediting Points</td><td>Contract performance / Legitimate interest (Art. 6(1)(b)(f))</td><td>Device ID, Advertising ID, ad interaction data</td></tr>
-      <tr><td>Processing payments and issuing refunds</td><td>Contract performance / Legal obligation (Art. 6(1)(b)(c))</td><td>Billing info, transaction records</td></tr>
-      <tr><td>Fraud detection and abuse prevention</td><td>Legitimate interest / Legal obligation (Art. 6(1)(f)(c))</td><td>Device fingerprint, IP address, account behaviour</td></tr>
-      <tr><td>Customer support</td><td>Contract performance / Legitimate interest (Art. 6(1)(b)(f))</td><td>Account data, communication records</td></tr>
-      <tr><td>Service analytics and improvement</td><td>Legitimate interest (Art. 6(1)(f)) — data anonymised/pseudonymised</td><td>Usage data, crash logs</td></tr>
-      <tr><td>Marketing communications</td><td>Consent / Legitimate interest for existing customers (Art. 6(1)(a)(f))</td><td>Email, notification preferences</td></tr>
-      <tr><td>Compliance with legal obligations</td><td>Legal obligation (Art. 6(1)(c))</td><td>Account records, transaction logs</td></tr>
-    </tbody>
-  </table>
-  <p>We will not use your personal data for purposes materially different from those above without prior notice and, where required, your consent.</p>
-
-  <!-- 4 -->
-  <h2 id="p4">4. The Ad-Subsidized Model — Advertising Data</h2>
-  <p>CieloCell's free-data model is powered by advertising revenue. For advertisers to pay us for ad delivery, we share certain device-level signals with our ad network partners. <strong>This is fundamental to how the Service works and we are committed to being transparent about it.</strong></p>
-  <p>When you watch an ad in the CieloCell app:</p>
-  <ul>
-    <li>Your device's <strong>advertising identifier</strong> (IDFA / GAID), <strong>country</strong>, <strong>device type</strong>, and <strong>ad completion signal</strong> are shared with the ad network serving that ad.</li>
-    <li>Depending on your device settings, ad networks may use your advertising ID to show you relevant advertising across other apps and services (interest-based advertising).</li>
-    <li>You can limit ad tracking or reset your advertising ID at any time:
-      <ul>
-        <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking → toggle off "Allow Apps to Request to Track"</li>
-        <li><strong>Android:</strong> Settings → Privacy → Ads → "Delete advertising ID" or "Opt out of Ads Personalization"</li>
-      </ul>
-    </li>
-    <li>Opting out of ad tracking means ads will still be shown but will be less relevant. Your ability to earn Points is not affected by this choice.</li>
-  </ul>
-  <p><strong>CieloCell does not share your name, email address, or payment information with advertisers.</strong></p>
-
-  <!-- 5 -->
-  <h2 id="p5">5. Who We Share Your Data With</h2>
-  <h3>5.1 Service Providers (Processors)</h3>
-  <p>We engage trusted third-party vendors who process data only on our instructions under binding data processing agreements:</p>
-  <ul>
-    <li><strong>Cloud infrastructure:</strong> Hosting, databases, and CDN (e.g. AWS, Google Cloud Platform).</li>
-    <li><strong>Payment processors:</strong> PCI DSS Level 1 certified providers (e.g. Stripe). No raw card data is accessed by CieloCell.</li>
-    <li><strong>Analytics:</strong> App performance and crash analytics (e.g. Firebase Crashlytics, Amplitude) — data is pseudonymised where possible.</li>
-    <li><strong>Customer support:</strong> Helpdesk and ticketing software.</li>
-    <li><strong>Email delivery:</strong> Transactional and marketing email providers.</li>
-  </ul>
-  <h3>5.2 MVNO Network Partners</h3>
-  <p>To provision your eSIM and deliver mobile data, we share your device EID and plan details with our licensed MVNO partner in your country. These partners process data under their own privacy policies and applicable telecommunications law. We contractually require MVNO partners to maintain appropriate data protection standards.</p>
-  <h3>5.3 Advertising Partners</h3>
-  <p>As described in Section 4, we share device-level advertising signals with ad network partners. We do not share personally identifiable information (name, email, payment data) with advertisers.</p>
-  <h3>5.4 Legal Requirements</h3>
-  <p>We may disclose personal data if required by law, court order, or governmental authority, or if we believe disclosure is necessary to: comply with a legal obligation; protect the rights or safety of CieloCell, our users, or the public; or detect, prevent, or address fraud or security issues. We disclose only the minimum data required and will notify you where legally permitted.</p>
-  <h3>5.5 Business Transfers</h3>
-  <p>In a merger, acquisition, asset sale, or restructuring of Cielo Cell AB, your data may transfer to the successor entity. We will provide prior notice where practicable and ensure the successor is bound to equivalent data protection standards.</p>
-  <h3>5.6 With Your Consent</h3>
-  <p>We may share data with third parties for purposes not described in this Notice where we have your explicit, informed, freely given consent.</p>
-
-  <!-- 6 -->
-  <h2 id="p6">6. International Data Transfers</h2>
-  <p>Cielo Cell AB is headquartered in Sweden (EU). Some of our service providers and MVNO partners operate in countries outside the EU/EEA. Where personal data is transferred to such countries, we ensure appropriate safeguards are in place, including:</p>
-  <ul>
-    <li><strong>EU Standard Contractual Clauses (SCCs)</strong> as approved by the European Commission (Decision 2021/914);</li>
-    <li><strong>UK International Data Transfer Agreements (IDTAs)</strong> where applicable;</li>
-    <li>Transfers to countries with an EU adequacy decision (e.g. Japan, Canada, New Zealand).</li>
-  </ul>
-  <p>You may request a copy of the applicable safeguards by contacting <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a>.</p>
-
-  <!-- 7 -->
-  <h2 id="p7">7. Retention Periods</h2>
-  <table>
-    <thead><tr><th>Data Category</th><th>Retention Period</th><th>Basis</th></tr></thead>
-    <tbody>
-      <tr><td>Account registration data</td><td>Duration of account + 7 years post-closure</td><td>Legal / tax obligation</td></tr>
-      <tr><td>Payment and transaction records</td><td>7 years</td><td>Swedish Bookkeeping Act (BFL)</td></tr>
-      <tr><td>Ad interaction logs</td><td>12 months, then aggregated/anonymised</td><td>Fraud detection / legitimate interest</td></tr>
-      <tr><td>Network usage data</td><td>12 months from date of use</td><td>Contract / legal obligation</td></tr>
-      <tr><td>Customer support communications</td><td>3 years from last interaction</td><td>Legitimate interest / legal claims</td></tr>
-      <tr><td>App analytics (aggregated)</td><td>Indefinite in anonymised form</td><td>Legitimate interest</td></tr>
-      <tr><td>Marketing consent records</td><td>Until withdrawal + 3 years</td><td>Compliance with consent records obligation</td></tr>
-      <tr><td>Closure data (re-registration prevention)</td><td>3 years from account closure</td><td>Legitimate interest / fraud prevention</td></tr>
-    </tbody>
-  </table>
-  <p>After the applicable retention period, data is securely deleted or irreversibly anonymised. Data may be retained longer where required by law, to resolve disputes, or to enforce our Terms.</p>
-
-  <!-- 8 -->
-  <h2 id="p8">8. Your Rights</h2>
-  <p>Under the GDPR (and equivalent laws), you have the following rights. To exercise any of them, contact <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a>. We will respond within <strong>30 days</strong> (extendable to 60 days for complex requests with notice).</p>
-  <div class="rights-grid">
-    <div class="right-card"><strong>Access (Art. 15)</strong><span>Request a copy of the personal data we hold about you and information about how it is used.</span></div>
-    <div class="right-card"><strong>Rectification (Art. 16)</strong><span>Request correction of inaccurate or incomplete personal data.</span></div>
-    <div class="right-card"><strong>Erasure (Art. 17)</strong><span>Request deletion of your personal data ("right to be forgotten"), subject to legal retention requirements.</span></div>
-    <div class="right-card"><strong>Restriction (Art. 18)</strong><span>Request that we restrict processing of your data in certain circumstances.</span></div>
-    <div class="right-card"><strong>Portability (Art. 20)</strong><span>Receive your data in a structured, machine-readable format and transmit it elsewhere.</span></div>
-    <div class="right-card"><strong>Object (Art. 21)</strong><span>Object to processing based on legitimate interests, including direct marketing (always honoured immediately).</span></div>
-    <div class="right-card"><strong>Withdraw Consent (Art. 7)</strong><span>Withdraw consent at any time without affecting the lawfulness of prior processing.</span></div>
-    <div class="right-card"><strong>Lodge a Complaint</strong><span>File a complaint with the Swedish Authority for Privacy Protection (IMY) at <a href="https://www.imy.se" target="_blank" rel="noopener">imy.se</a>, or your local EU supervisory authority.</span></div>
-  </div>
-  <p>We will not discriminate against you for exercising any of these rights. To unsubscribe from marketing, click the "unsubscribe" link in any marketing email or contact <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a>. Transactional service communications cannot be opted out of while your account is active.</p>
-
-  <!-- 9 -->
-  <h2 id="p9">9. California Residents — CCPA / CPRA</h2>
-  <p>If you are a California resident, the California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA) grants you additional rights.</p>
-  <h3>Categories of Personal Information Collected (preceding 12 months)</h3>
-  <ul>
-    <li>Identifiers (name, email, device ID, IP address, advertising ID);</li>
-    <li>Commercial information (purchase history, data plan activations, Points balance);</li>
-    <li>Internet / electronic activity (app usage, ad interaction, session data);</li>
-    <li>Geolocation data (country-level only);</li>
-    <li>Inferences drawn from the above to create a profile for ad relevance.</li>
-  </ul>
-  <h3>Sale or Sharing of Personal Information</h3>
-  <p>CieloCell does not sell personal information for money. However, sharing device advertising identifiers with ad network partners may constitute "sharing" for cross-context behavioural advertising under CPRA. <strong>You have the right to opt out of this sharing.</strong></p>
-  <p>To opt out: reset or disable your advertising ID on your device (iOS: Settings → Privacy &amp; Security → Tracking; Android: Settings → Privacy → Ads), or email <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a> with the subject "Do Not Sell or Share My Personal Information."</p>
-  <h3>Your California Rights</h3>
-  <ul>
-    <li><strong>Right to Know:</strong> Categories and specific pieces of personal information collected, sources, business purposes, and third-party disclosures.</li>
-    <li><strong>Right to Delete:</strong> Request deletion of personal information, subject to exceptions.</li>
-    <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information.</li>
-    <li><strong>Right to Opt Out:</strong> Opt out of the sale or sharing of personal information for cross-context behavioural advertising.</li>
-    <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> Limit our use to service provision where applicable.</li>
-    <li><strong>Right to Non-Discrimination:</strong> We will not deny, charge differently for, or provide a different level of service for exercising CCPA rights.</li>
-  </ul>
-  <p>To submit a verifiable consumer request, email <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a> from your registered address. We will respond within 45 days, extendable by 45 more days with notice.</p>
-
-  <!-- 10 -->
-  <h2 id="p10">10. Children's Privacy</h2>
-  <p>The Service is not directed to individuals under 18. We do not knowingly collect personal data from minors. If you believe we have inadvertently collected data from a child under 18, contact us immediately at <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a> and we will delete it promptly. CieloCell complies with COPPA (US) and applicable international equivalents.</p>
-
-  <!-- 11 -->
-  <h2 id="p11">11. Cookies and Tracking Technologies</h2>
-  <p>Our website uses cookies and similar technologies (pixels, local storage) to: operate essential site functions; remember preferences; analyze traffic; and serve advertising. Types used:</p>
-  <ul>
-    <li><strong>Strictly necessary:</strong> Required for site functionality. Cannot be disabled.</li>
-    <li><strong>Analytics:</strong> Help us understand how visitors interact with the site (e.g. Google Analytics). Opt out via your browser settings or the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out add-on</a>.</li>
-    <li><strong>Advertising:</strong> Deliver relevant ads and measure effectiveness — subject to the opt-out rights in Sections 4 and 9.</li>
-  </ul>
-  <p>You can manage cookies through your browser's privacy settings. Disabling certain cookies may affect website functionality. Where required by law (e.g. ePrivacy Directive), we obtain consent before placing non-essential cookies.</p>
-
-  <!-- 12 -->
-  <h2 id="p12">12. Security</h2>
-  <p>We implement industry-standard technical and organisational security measures, including:</p>
-  <ul>
-    <li>Encryption in transit (TLS 1.2+) and at rest (AES-256);</li>
-    <li>Role-based access controls and least-privilege principles for internal systems;</li>
-    <li>Regular penetration testing and vulnerability assessments;</li>
-    <li>Incident response procedures including mandatory breach notifications to regulators (within 72 hours under GDPR Art. 33) and affected users where required;</li>
-    <li>Payment data handled exclusively by PCI DSS-certified processors.</li>
-  </ul>
-  <p>Despite our best efforts, no method of internet transmission or storage is 100% secure. To responsibly disclose a security vulnerability, email <a href="mailto:security@cielocell.com">security@cielocell.com</a>.</p>
-
-  <!-- 13 -->
-  <h2 id="p13">13. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy to reflect changes in our practices, technology, or legal requirements. Material changes will be communicated via in-app notice and, where practicable, by email to your registered address with at least 14 days' advance notice. The "Last updated" date at the top reflects the most recent revision. Continued use of the Service after the effective date constitutes acceptance.</p>
-
-  <!-- 14 -->
-  <h2 id="p14">14. Contact and Data Protection Officer</h2>
-  <div class="callout callout-blue">
-    <p><strong>Cielo Cell AB — Privacy Team</strong><br/>
-    Målarevägen 24, 227 30 Lund, Sweden<br/>
-    Privacy inquiries &amp; data subject requests: <a href="mailto:privacy@cielocell.com">privacy@cielocell.com</a><br/>
-    Security disclosures: <a href="mailto:security@cielocell.com">security@cielocell.com</a><br/>
-    General support: <a href="mailto:support@cielocell.com">support@cielocell.com</a></p>
-  </div>
-  <p>EU/EEA users may contact the <strong>Swedish Authority for Privacy Protection (IMY)</strong> at <a href="https://www.imy.se" target="_blank" rel="noopener">imy.se</a>. A full list of EU supervisory authorities is at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">edpb.europa.eu</a>. UK users may contact the ICO at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
-  <p>For the EU Online Dispute Resolution platform: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
-
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <a href="index.html" class="logo">
-      <img src="CC_Cloud_Only_SQ.png" alt="CieloCell" style="height:22px;mix-blend-mode:multiply" />
-      <span class="logo-text" style="font-size:17px"><span class="cielo">Cielo</span><span class="cell">Cell</span></span>
-    </a>
-    <div class="footer-links">
-      <a href="terms.html">Terms of Service</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <span style="color:var(--border)">|</span>
-      <span style="font-size:13px;color:var(--grey)">© 2026 Cielo Cell AB. All rights reserved.</span>
-    </div>
-  </div>
-  <div class="footer-legal">
-    CieloCell is an ad-subsidized eSIM service operated by Cielo Cell AB (org. no. 559579-6912), registered in Sweden. Mobile data plans are provided through licensed MVNO partners. CieloCell is not affiliated with Apple Inc. or Google LLC. Apple and the Apple logo are trademarks of Apple Inc. Google and the Google logo are trademarks of Google LLC.
-  </div>
-</footer>
+<div id="root"></div>
+<script type="text/babel" src="cc-tokens.jsx"></script>
+<script type="text/babel" src="cc-icons.jsx"></script>
+<script type="text/babel" src="cc-components.jsx"></script>
+<script type="text/babel" src="cc-legal-shared.jsx"></script>
+<script type="text/babel" src="cc-terms-page.jsx"></script>
+<script type="text/babel" src="cc-privacy-page.jsx"></script>
+<script type="text/babel">
+  const here = 'privacy';
+  const onBack = () => { window.location.href = 'index.html'; };
+  const navigate = (next) => {
+    if (next === here) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+    if (next === 'terms')   { window.location.href = 'terms.html'; return; }
+    if (next === 'privacy') { window.location.href = 'privacy.html'; return; }
+    window.location.href = 'index.html';
+  };
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <PrivacyPage onBack={onBack} onNav={navigate} />
+  );
+</script>
 </body>
 </html>

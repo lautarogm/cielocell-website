@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CieloCell — free data, free global.</title>
-<link rel="icon" type="image/png" href="assets/mascot-cloud.png" />
-<link rel="apple-touch-icon" href="assets/mascot-cloud.png" />
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet" />
@@ -27,18 +27,14 @@
 <script type="text/babel" src="cc-privacy-page.jsx"></script>
 <script type="text/babel" src="cc-landing.jsx"></script>
 <script type="text/babel">
-  const Root = () => {
-    const [view, setView] = React.useState('landing');
-    React.useEffect(() => { window.scrollTo(0, 0); }, [view]);
-    const navigate = (next) => {
-      if (next === view) { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-      else { setView(next); }
-    };
-    if (view === 'terms')   return <TermsPage   onBack={() => setView('landing')} onNav={navigate} />;
-    if (view === 'privacy') return <PrivacyPage onBack={() => setView('landing')} onNav={navigate} />;
-    return <LandingPage onNav={navigate} />;
+  // URL-based routing — each view is a real page, so links can be shared.
+  const navigate = (next) => {
+    const here = 'landing';
+    if (next === here) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+    if (next === 'terms')   { window.location.href = 'terms.html'; return; }
+    if (next === 'privacy') { window.location.href = 'privacy.html'; return; }
   };
-  ReactDOM.createRoot(document.getElementById('root')).render(<Root />);
+  ReactDOM.createRoot(document.getElementById('root')).render(<LandingPage onNav={navigate} />);
 </script>
 </body>
 </html>
