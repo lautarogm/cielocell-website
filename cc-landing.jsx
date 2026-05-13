@@ -65,7 +65,7 @@ const LandingPage = ({ onBack, onNav }) => {
       <section style={{ position: 'relative', padding: 'clamp(48px, 8vw, 96px) 28px clamp(64px, 9vw, 120px)', overflow: 'hidden' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative', zIndex: 0 }}>
           <h1 style={{ fontFamily: D, fontWeight: 900, lineHeight: 0.88, letterSpacing: -0.06 + 'em', margin: 0, textTransform: 'lowercase', color: CC.ink, maxWidth: '14ch', fontSize: 'clamp(64px, 11vw, 160px)' }}>
-            free data,<br /><span style={{ color: CC.pink }}>free</span> backup
+            free data,<br /><span style={{ color: CC.pink }}>free</span> <span style={{ color: CC.pink }}>contract</span>
           </h1>
           <p style={{ fontFamily: F, fontSize: 'clamp(18px, 2vw, 26px)', fontWeight: 500, lineHeight: 1.35, color: CC.ink, textTransform: 'lowercase', margin: "39px 0px 40px" }}>free or low-cost mobile data powered by ads. no contracts, no credit card, no hidden fees 
 
